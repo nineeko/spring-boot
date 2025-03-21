@@ -94,5 +94,18 @@ public class FirstController {
         return "first/loginResult";
     }
 
+    @GetMapping("/body")
+    public void body() {}
 
+    /* 5. @RequestBody */
+    @PostMapping("/body")
+    public void bodyTest(
+            @RequestBody String body,
+            @RequestHeader("content-type") String contentType,
+            @CookieValue("JSESSIONID") String sessionId
+    ) {
+        System.out.println("body: "+body);
+        System.out.println("contentType: "+contentType);
+        System.out.println("sessionId: "+sessionId);
+    }
 }
