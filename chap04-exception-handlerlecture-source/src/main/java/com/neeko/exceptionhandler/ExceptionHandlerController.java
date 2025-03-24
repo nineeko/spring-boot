@@ -27,12 +27,14 @@ public class ExceptionHandlerController {
 
     @ExceptionHandler(NullPointerException.class)
     public String nullPointerExceptionHandler(NullPointerException e) {
+        System.out.println("지역 범위의 Exception Handler 동작");
         System.out.println("message : " + e.getMessage());
         return "error/nullPointer";
     }
 
     @ExceptionHandler(MemberRegistException.class)
     public String userExceptionHandler(MemberRegistException e, Model model) {
+        System.out.println("지역 범위의 Exception Handler 동작");
         System.out.println("message : " + e.getMessage());
         model.addAttribute("exception", e);
         return "error/memberRegist";
