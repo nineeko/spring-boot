@@ -13,10 +13,7 @@ public class FirstController {
 
     /* 핸들러 메서드 반환 값이 void인 경우 요청 주소가 곧 view의 이름이 된다.*/
     @GetMapping("/regist")
-    public void regist() {
-
-
-    }
+    public void regist() {}
 
     /* 1. WebRequest로 요청 파라미터 전달 받기
     * HttpServletRequest/Response도 매개변수에 선언해서 사용하는 것이 가능하긴 하지만
