@@ -15,9 +15,10 @@ public class OtherController {
     }
 
     @GetMapping("/other-controller-user")
-    public String userExceptionTest() throws MemberRegistException {
-        boolean check = true;
-        if(check) throw new MemberRegistException("당신 같은 사람은 회원으로 받을 수 없습니다.");
+    public String arrayExceptionTest() throws MemberRegistException {
+
+        double[] arr = new double[0];
+        System.out.println(arr[0]);
         return "/";
     }
 }
